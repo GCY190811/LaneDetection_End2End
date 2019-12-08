@@ -380,7 +380,7 @@ def validate(loader, model, criterion, criterion_seg,
             # Evaluate model
             try:
                 beta0, beta1, beta2, beta3, weightmap_zeros, M, \
-                output_net, outputs_line, outputs_horizon = model(input, args.end_to_end)
+                output_net, outputs_line, outputs_horizon = model(input, args.end_to_end) # 输入的是什么
             except RuntimeError as e:
                 print("Batch with idx {} skipped due to singular matrix".format(idx.numpy()))
                 print(e)

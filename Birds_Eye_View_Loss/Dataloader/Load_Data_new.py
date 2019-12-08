@@ -479,3 +479,14 @@ def get_testloader(json_file, transform, batch_size, shuffle, num_workers, path)
                                           shuffle=shuffle,
                                           num_workers=num_workers)
     return data_loader
+
+
+def get_testloaderV1(json_file, transform, batch_size, num_workers, path):
+    """
+    测试数据集
+    """
+    data_loader = DataLoader(dataset=transformed_dataset, 
+                                          batch_size=batch_size,
+                                          shuffle=shuffle,
+                                          num_workers=num_workers)
+    return data_loader
